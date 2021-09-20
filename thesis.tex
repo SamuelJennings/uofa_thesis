@@ -1,0 +1,80 @@
+% There are two otion that can be provided to the uofathesis class
+% 1) published - adjusts the declaration to include a statement regarding published materials. This is required if any chapters in your thesis have been published.
+% 2) international - include this if you are an international student to exclude the paragraph regarding the Australian Government Research Training Program Scholarship 
+\documentclass[published]{uofathesis}
+
+% Any packages should go here
+\usepackage{lineno,setspace}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb,amsfonts,amsbsy}
+\usepackage{rotating,array,multirow}
+\usepackage{textcomp}
+\usepackage{afterpage, emptypage}
+\usepackage{pdflscape}
+\usepackage{graphicx,natbib} 
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{layouts}
+\usepackage{pdfpages}
+
+% SET MARGINS
+\geometry{outer=20mm,inner=35mm}
+
+% ADD HYPERLINKS TO DOCUMENT BUT MAINTAIN BLACK FONT
+\hypersetup{colorlinks=true,allcolors=}
+
+\title{The title of my thesis}
+\titlesize{\huge} % recommend using any of \large, \Large, \LARGE, \huge, \HUGE, depening on length of title. 
+\author{Samuel Jennings}
+\degree{Doctor of Philosophy}
+\department{Department of Earth Sciences}
+\school{School of Rock}
+
+% PATHS TO FIGURES - add these as needed
+\graphicspath{
+    {chapter1/figures/}
+    {chapter2/figures/}
+    }
+
+% Use the includeonly command to work on individual chapters at a time.
+% Comment out this command to build the entire document.
+% \includeonly{chapter1/body}
+
+\begin{document}
+\frontmatter
+\maketitle
+
+% Create the following tables
+\tableofcontents
+\listoftables
+\listoffigures
+
+% HDR Declaration
+\makedeclaration
+
+% Import the various things
+\include{front/acknowledgements}
+\include{front/abstract}
+
+\mainmatter
+\include{introduction}
+\include{chapter1/body}
+\include{chapter2/body}
+% continue with as many chapter as required
+\include{conclusions}
+
+\appendix
+\cleardoublepage
+% Import the appendices 
+\input{chapter1/appendix} 
+
+\backmatter
+% Add the bibliography to the table of contents
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{apa} % choose whatever style you wish, I don't believe there is a requirement from the university
+\bibliography{reference_list}
+
+
+\end{document}
+
