@@ -10,3 +10,4 @@
 *.fdb_latexmk
 *.fls
 *.DS_Store
+*.vscode
