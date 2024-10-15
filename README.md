@@ -1,6 +1,6 @@
 # University of Adelaide thesis template for masters and PhD
 
-Download as a zip file and modify the contents to begin writing your thesis. Requires an installed latex distribution on the end users computer. Basic instructions are provided as comments in the downloadewd files.
+Clone, fork or download the repository as a zip file and modify the contents to begin writing your thesis. Requires an installed latex distribution on the end users computer. Basic instructions are provided as comments in the downloaded files.
 
 
 ## Features
